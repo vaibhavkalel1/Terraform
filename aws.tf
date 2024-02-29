@@ -66,7 +66,7 @@ resource "aws_security_group" "instance_sg" {
 }
 
 # Create EC2 instance
-resource "aws_instance" "example" {
+resource "aws_instance" "Terraform Instance" {
   ami             = "ami-02ca28e7c7b8f8be1"
   instance_type   = "t2.micro"
   subnet_id       = aws_subnet.my_subnet.id
