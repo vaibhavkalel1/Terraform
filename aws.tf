@@ -2,7 +2,7 @@
 
 # Define provider (AWS)
 provider "aws" {
-  region = "your_aws_region"
+  region = "us-east-2"
 }
 
 # Create VPC
