@@ -1,5 +1,3 @@
-# main.tf
-
 # Define provider (AWS)
 provider "aws" {
   region = "us-east-2"
@@ -65,6 +63,7 @@ resource "aws_security_group" "instance_sg" {
   }
 }
 
+# Create EC2 instance
 resource "aws_instance" "example" {
   ami             = "ami-02ca28e7c7b8f8be1"
   instance_type   = "t2.micro"
@@ -73,5 +72,18 @@ resource "aws_instance" "example" {
   tags = {
     Name = "Terraform Instance"
   }
-}
 
+  connection {
+    type        = "ssh"
+    user        = "ec2-user"
+    private_key = file("/path/to/your/private/key.pem")
+    host        = self.public_ip
+  }
+
+  provisioner "remote-exec" {
+    inline = [
+      "sudo yum update -y",
+      "sudo yum install -y ansible"
+    ]
+  }
+}
