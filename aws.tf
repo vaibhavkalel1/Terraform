@@ -65,13 +65,11 @@ resource "aws_security_group" "instance_sg" {
   }
 }
 
-# Create EC2 instance
 resource "aws_instance" "example" {
   ami             = "ami-02ca28e7c7b8f8be1"
   instance_type   = "t2.micro"
   subnet_id       = aws_subnet.my_subnet.id
-  security_groups = [aws_security_group.instance_sg.name]
-
+  vpc_security_group_ids = [aws_security_group.instance_sg.id]  # Use security group ID instead
   tags = {
     Name = "Terraform Instance"
   }
