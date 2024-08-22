@@ -70,3 +70,8 @@ $ terraform logout
 
 $ terraform providers
        ---Show the providers required by the configuration.
+
+
+
+##### Whenever you want to destroy any perticular resources rather than all the use (-target=<aws_instance.web2> #####
+$ terraform destroy -target=<aws_instance.web2>
