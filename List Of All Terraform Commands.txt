@@ -1,0 +1,72 @@
+############## Here’s a list of common Terraform commands with brief descriptions: ##############
+
+1) Initialization
+$ terraform init
+     ---nitialize a Terraform configuration, download providers, and set up the backend.
+
+2) Validation
+$ terraform validate
+    ---Validate the syntax and configuration of your Terraform files.
+
+3)Planning
+$ terraform plan
+    ---Generate an execution plan to preview changes before applying them.
+
+4)Applying Changes
+$ terraform apply
+   ----Apply the changes required to reach the desired state of the configuration.
+
+5)Destroying Infrastructure
+$ terraform destroy
+Destroy the infrastructure managed by Terraform.
+
+6)State Management
+$ terraform state list
+           ---List resources in the Terraform state.
+
+$ terraform state show <resource>
+        ---Show detailed information about a specific resource in the state.
+
+$ terraform state rm <resource>
+       ---Remove a resource from the Terraform state.
+
+$ terraform state mv <source> <destination>
+      ---Move a resource within the Terraform state.
+
+7)Output
+$ terraform output
+       ----Show output values from the Terraform configuration.
+8) Workspace Management
+$ terraform workspace list
+        ---List all workspaces.
+
+$ terraform workspace show
+        ---Show the current workspace.
+
+$ terraform workspace new <name>
+        ---Create a new workspace.
+
+$ terraform workspace select <name>
+      ---Select an existing workspace.
+
+9) Refresh
+$ terraform refresh
+      ---Update the state with the real infrastructure.
+10) Import
+$ terraform import <resource> <id>
+          ---Import existing infrastructure into Terraform management.
+11) Miscellaneous
+$ terraform version
+           ---Show the current Terraform version.
+
+$ terraform help
+         ---Display help for Terraform commands and usage.
+
+$ terraform login
+       ---Log in to Terraform Cloud or Terraform Enterprise.
+
+$ terraform logout
+       ---Log out from Terraform Cloud or Terraform Enterprise.
+
+$ terraform providers
+       ---Show the providers required by the configuration.
