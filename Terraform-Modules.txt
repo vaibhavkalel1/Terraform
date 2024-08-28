@@ -1,0 +1,53 @@
+##################### Terraform Modules #####################
+
+A Terraform module is a reusable container for Terraform configurations that defines a set of related resources and their dependencies.
+
+
+### List of terraform modules.
+
+1. Networking Modules:-s
+a) VPC Module: Creates a Virtual Private Cloud (VPC) with associated subnets, route tables, and internet gateways.
+b) Subnet Module: Creates and manages subnets within a VPC.
+c) Security Group Module: Defines security groups and their rules.
+
+2. Compute Modules
+a) EC2 Module: Provisioning Amazon EC2 instances, including instance types, AMIs, and key pairs.
+b) Auto Scaling Module: Configures auto-scaling groups and launch configurations.
+c) Load Balancer Module: Sets up load balancers such as AWS Elastic Load Balancers (ELB) or Application Load Balancers (ALB).
+
+3. Storage Modules
+a) S3 Bucket Module: Manages AWS S3 buckets and their settings.
+b) EBS Volume Module: Creates and attaches AWS Elastic Block Store (EBS) volumes to instances.
+
+4. Database Modules
+a) RDS Module: Configures Amazon RDS instances, including database engine, instance type, and storage.
+b) DynamoDB Module: Sets up Amazon DynamoDB tables and indexes.
+
+5. Identity and Access Management Modules
+a) IAM Role Module: Creates IAM roles and attaches policies.
+b) IAM Policy Module: Manages IAM policies and their attachments.
+
+6. Monitoring and Logging Modules
+a) CloudWatch Module: Sets up Amazon CloudWatch metrics, alarms, and dashboards.
+b) Logging Module: Configures logging for services and applications.
+
+7. Networking Security Modules
+a) NACL Module: Manages Network Access Control Lists (NACLs) and their rules.
+b) WAF Module: Configures Web Application Firewall (WAF) rules and web ACLs.
+
+8. Application Deployment Modules
+a) ECS Module: Configures Amazon ECS clusters, services, and task definitions.
+b) EKS Module: Sets up Amazon EKS clusters and related configurations.
+c) S3 Static Website Module: Hosts static websites on Amazon S3 with appropriate bucket policies.
+
+9. Infrastructure as Code Management Modules
+a)  Backend Module: Configures Terraform backends for state management.
+b) State Locking Module: Implements state locking mechanisms for collaborative environments.
+
+10. Multi-Cloud Modules
+a) Azure VNet Module: Configures Virtual Networks in Microsoft Azure.
+b) GCP VPC Module: Sets up Virtual Private Cloud networks in Google Cloud Platform.
+
+11. Utilities and Helper Modules
+a) Tags Module: Manages resource tagging across various services.
+b) Outputs Module: Collects and formats outputs from multiple modules for easier consumption. 
